@@ -994,8 +994,9 @@ curl -O $PURL
     }
 
 MushM_Uninstall {
-cd /usr/bin
-
+cp /mnt/stateful_partition/murkmod/crosh /usr/bin
+cat crosh > crosh
+cat crosh > MushM
     }
 
 #!/usr/bin/env bash
