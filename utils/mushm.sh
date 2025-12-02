@@ -986,14 +986,14 @@ run_firmware_util() {
 doas "bash <(curl -L https://mrchromebox.tech/firmware-util.sh)"
     }
 
-url_plugin_install {
+url_plugin_install() {
 cd /mnt/stateful_partition/murkmod/plugins
 read -p "Enter URL of desired plugin: " PURL
 sleep 2
 curl -O $PURL
     }
 
-MushM_Uninstall {
+MushM_Uninstall() {
 cp /mnt/stateful_partition/murkmod/crosh /usr/bin
 cat crosh > crosh
 cat crosh > MushM
