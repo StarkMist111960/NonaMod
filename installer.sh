@@ -24,6 +24,8 @@ log "Creating directories..."
 mkdir -p "$MURK_DIR/plugins" "$MURK_DIR/pollen" || error "Failed to create MurkMod directories"
 sleep 1
 
+cp /usr/bin/crosh /mnt/stateful_partition/murkmod
+
 log "Installing MushM"
 curl -fsSLo "$CROSH" "$MUSHM_URL" || error "Failed to download MushM"
 sleep 1
