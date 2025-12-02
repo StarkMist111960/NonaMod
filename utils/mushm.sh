@@ -113,8 +113,8 @@ main() {
 (1) Root Shell                     (26) [EXPERIMENTAL] Firmware Utility
 (2) Chronos Shell                  (27) Check for updates Murkmod
 (3) Crosh                          (28) Check for updates MushM
-(4) Plugins                        (29) Tetris
-(5) Install plugins                                
+(4) Plugins                        (29) Tetris     
+(5) Install plugins                (30) Install Plugins From URL                                
 (6) Uninstall plugins
 (7) Powerwash
 (8) Emergency Revert & Re-Enroll
@@ -171,6 +171,7 @@ EOF
         400) runjob do_dev_updates && exit 0 ;;
         f) runjob dev_fix ;;
         29) runjob tetris ;;
+        30) runjob url_plugin_install
         101) runjob hard_disable_nokill ;;
         111) runjob hard_enable_nokill ;;
         112) runjob ext_purge ;;
@@ -982,6 +983,13 @@ edit_pollen() {
 
 run_firmware_util() {
 doas "bash <(curl -L https://mrchromebox.tech/firmware-util.sh)"
+    }
+
+url_plugin_install {
+cd /mnt/stateful_partition/murkmod/plugins
+read -p "Enter URL of desired plugin: " PURL
+sleep 2
+curl -O $PURL
     }
 
 #!/usr/bin/env bash
