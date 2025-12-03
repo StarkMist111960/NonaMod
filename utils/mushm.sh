@@ -116,7 +116,7 @@ main() {
 (4) Plugins                        (29) Tetris     
 (5) Install plugins                (30) Install Plugins From URL                                
 (6) Uninstall plugins              (31) Uninstall MushM (Replace With Crosh)
-(7) Powerwash
+(7) Powerwash                  
 (8) Emergency Revert & Re-Enroll
 (9) Soft Disable Extensions
 (10) Hard Disable Extensions
