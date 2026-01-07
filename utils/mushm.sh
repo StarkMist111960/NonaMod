@@ -172,8 +172,7 @@ EOF
         400) runjob do_dev_updates && exit 0 ;;
         f) runjob dev_fix ;;
         29) runjob tetris ;;
-        30) runjob url_plugin_install
-        31) runjob MushM_Uninstall
+        30) runjob url_plugin_install ;;
         101) runjob hard_disable_nokill ;;
         111) runjob hard_enable_nokill ;;
         112) runjob ext_purge ;;
