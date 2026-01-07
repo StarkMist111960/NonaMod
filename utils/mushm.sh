@@ -1,4 +1,4 @@
-#!/bin/bas
+#!/bin/bash
 
 get_largest_cros_blockdev() {
     local largest size dev_name tmp_size remo
