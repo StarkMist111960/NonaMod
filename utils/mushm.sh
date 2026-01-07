@@ -115,7 +115,7 @@ main() {
 (3) Crosh                          (28) Check for updates MushM
 (4) Plugins                        (29) Tetris     
 (5) Install plugins                (30) Install Plugins From URL                                
-(6) Uninstall plugins              
+(6) Uninstall plugins              (31) Uninstall MushM
 (7) Powerwash                  
 (8) Emergency Revert & Re-Enroll
 (9) Soft Disable Extensions
@@ -173,6 +173,7 @@ EOF
         f) runjob dev_fix ;;
         29) runjob tetris ;;
         30) runjob url_plugin_install ;;
+        31) runjob mushm_uninstall ;;
         101) runjob hard_disable_nokill ;;
         111) runjob hard_enable_nokill ;;
         112) runjob ext_purge ;;
@@ -991,6 +992,10 @@ cd /mnt/stateful_partition/murkmod/plugins
 read -p "Enter URL of desired plugin: " PURL
 sleep 2
 curl -O $PURL
+    }
+
+mushm_uninstall() {
+cat /mnt/stateful_partition/murkmod/crosh > /usr/bin/crosh
     }
 
 #!/usr/bin/env bash
